@@ -1,0 +1,43 @@
+#nav01,#nav1{width: 1290px ;margin: 0 auto}
+#nav01>ul>li{float: left;margin:10px 10px}
+#nav01>ul>li a:hover{color: #0aa1ed}
+#nav01:after{content:"";display:block;clear:both;}
+#nav01>ul>li{height: 30px;margin-bottom: 0;text-align: center;line-height: 30px;padding: 0 20px}
+#nav01>ul>li.li{background: white;border: 1px solid #e7e7e7;border-bottom: none;font-weight: 1000}
+#nav01>ul>li.li a{color: #0aa1ed}
+#nav0{background: url("../img/header/top-navbg.png") repeat-x;position: relative}
+.QRcode{ background: url("../img/header/ewm_app.jpg");width: 278px;height: 103px;position: absolute;left: 358px;display: none}
+#nav1>ul>li:first-child img{width: 150px ; height: 55px ; }
+#nav1>ul>li:last-child{background: #0aa1ed;height: 45px;line-height: 45px;width: 140px;text-align: center;cursor: pointer;color: white;}
+#nav1>ul>li:last-child img{margin-right: 10px; vertical-align: middle}
+#nav1>ul>li:nth-child(2) .span{border:2px solid #0aa1ed;display: inline-block;}
+#nav1>ul>li{float: left;margin: 10px 30px }
+#nav1>ul>li input{width: 400px ;height: 40px ;border:0;outline: none;font-size: 18px;padding-left:20px  }
+#nav1>ul>li  .spans{text-align:center;line-height: 40px; display: inline-block;  width: 150px ;height: 43px;background: #0aa1ed ;color: white }
+#nav1>ul>li  .spans1 a{font-size: 14px;margin: 0 5px}
+#nav1>ul{margin: 10px 5%}
+#nav1:after{content:"";display:block;clear:both;}
+#nav21:after{content:"";display:block;clear:both;}
+#nav21>ul>li{float: left;margin:10px 20px}
+#nav21>ul>li:first-child{font-weight: 1000;}
+#nav21>ul>li:first-child a{color: #0aa1ed}
+#nav21>ul>li:first-child i{display: inline-block; background: url("../img/header/top_bar2.png");width: 9px;height: 6px;background-position:-110px -65px ;margin-left: 5px}
+#nav21{margin:0 auto;width: 1100px;position: relative;z-index: 100}
+#nav2{margin-top: 25px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;position: relative;z-index: 99}
+#nav22:after{content: "";display: block;clear: both}
+#nav22{width: 500px;top:40px;position: absolute;width: 140px;box-shadow: 0 3px 5px gray;background: white;}
+#nav22 ul li a{text-align: left;line-height: 39px; display:inline-block;  width: 140px;height: 39px;font-size: 14px;position: relative}
+.nav_icon{display: inline-block;width: 6px ;height: 12px;background:url("../img/header/xinmayup.png");background-position:-117px -83px;position: absolute; top:15px;
+    right: 15px;  }
+.nav_icon0{display: inline-block;margin: 0 10px; background: url("../img/header/xinmayup.png");width: 12px;height: 16px;}
+.hover01:hover .hover02{display: block}
+.nav_icon1{background-position: -114px 0}
+.nav_icon2{background-position: -114px -21px}
+.nav_icon3{background-position: -131px 0}
+.nav_icon4{background-position: -146px -4px}
+.nav_icon5{background-position: -129px -21px}
+.nav_icon6{background-position: -146px -22px}
+.nav_icon7{background-position: -113px -41px}
+.nav_icon8{background-position: -131px -41px}
+.nav_icon9{background-position: -151px -41px}
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <style>
+        /*#details div{border: 1px solid red}*/
+        #details .width{width: 1100px;margin:0 auto}
+        #details .detail_nav ul li{  float: left;margin:5px}
+        #details .detail_nav ul li a:hover{color: #0aa1ed}
+        #details .detail_nav ul li:first-child{font-weight: 1000}
+        .body_c_b .sw_img li{float: left}
+        .body_c_b .sw_img{width: 500px;overflow: hidden;height: 82px}
+        .body_c_b .sw_img li img{width: 70px;height: 70px;border: 1px solid #ccc;margin:9px 0 10px 10px }
+        .body_c_b li:nth-child(4) div:first-child{width: 521px;height: 88px;border: 1px solid #ccc}
+        .body_c_b li:nth-child(6) input{width: 38px;height: 38px;border: 1px solid #aaa;text-align: center}
+        .body_c{width: 635px;height: 450px}
+        .background{background: url("../img/index/icon.png")}
+        .add_reduce{width: 20px;height: 90px;}
+        .add,.reduce{width: 20px;height: 45px;display: block;}
+        .add{background-position: -129px -392px}
+        .reduce{background-position: -129px -438px}
+
+        .add_small,.reduce_small{width: 20px;height: 20px;display: block;}
+        .add_small{background-position: -230px -310px}
+        .reduce_small{background-position: -230px -330px}
+        .tuihuo{width: 14px ; height: 14px}
+        .body_c_b .add_cart{width:148px;height: 41px;background-position: 0 -65px;cursor: pointer;margin:0 15px}
+        .body_c_b .add_QR{width:123px;height: 41px;cursor: pointer;position: relative;z-index: 200; background: url("../img/index/phonebuy.jpg")}
+    </style>
+</head>
+<body>
+<header id="header"></header>
+<div id="details">
+    <div class="detail_nav afterCrFl width">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li>&gt</li>
+            <li><a href="#">洗护用品</a></li>
+            <li>&gt</li>
+            <li><a href="#">清洁用品</a></li>
+            <li>&gt</li>
+            <li>小白猫 柔护洗衣皂 95g/块</li>
+        </ul>
+    </div>
+    <div class="detail_body width">
+        <div class="body_l">
+            <div class="body_l_t"></div>
+            <div class="body_l_m"></div>
+            <div class="body_l_b"></div>
+        </div>
+        <div class="body_c">
+            <div class="body_c_t">
+                <h1>小白猫 柔护洗衣皂 95g/块</h1>
+                <a href="#"><strong>小白猫满66元减20元</strong></a>
+            </div>
+            <div class="body_c_b">
+                <i></i>
+                <span>母婴之家发货</span>
+                <ul>
+                    <li>
+                        <div class="leftfl">促销价</div>
+                        <div>￥11.80</div>
+                    </li>
+                    <li>
+                        <div>促销信息 <i></i><span>小白猫满58减18</span></div>
+                    </li>
+                    <li>
+                        <div><i></i> <span>加1元起可换购</span></div>
+                    </li>
+                    <li>
+                        <div>
+                            <ul class="sw_img leftfl">
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                                <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
+                            </ul>
+                            <div class="add_reduce leftfl">
+                                <a href="#" class="add background"></a>
+                                <a href="#" class="reduce background"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearf">
+                        <div class="leftfl">颜色</div>
+                        <div>默认</div>
+                    </li>
+                    <li>
+                        <div class="leftfl">
+                            <input type="text" value="1"/>
+                            <div class="leftrt">
+                                <a href="#" class="background add_small"></a>
+                                <a href="#" class="background reduce_small"></a>
+                            </div>
+                        </div>
+                        <div class="add_cart leftfl background"></div>
+                        <div class="add_QR leftfl"></div>
+                    </li>
+                    <li class="clearf">
+                        <div  class="leftfl">说明</div>
+                        <img src="../img/index/g_success.png" class="tuihuo leftfl"/>
+                        <div>出库15天内可退货</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="body_r">
+            <div class="body_r_t"></div>
+            <div class="body_r_m"></div>
+            <div class="body_r_b"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--<footer id="footer"></footer>-->
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/footer.js"></script>
+</body>
+</html>
+

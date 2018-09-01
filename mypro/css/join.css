@@ -1,0 +1,45 @@
+
+
+
+i{
+    width: 150px;
+    height: 598px;
+    background: url("../img/join/silder-menu.png");
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    margin-top: -300px;
+}
+i>a{
+    display: block;
+    width: 119px ;
+    height: 31px;
+    margin: 12px;
+}
+i>a:first-child{margin-top: 110px;}
+i>a:last-child{height:65px;}
+.input{
+    display: block;
+    float: left;
+    height:40px;
+    width: 350px;
+    outline: none;
+    padding-left: 20px;
+}
+#bgdiv div:first-child{
+    position: absolute;
+    margin:0 auto;
+    top:105%;
+    left: 25%;
+}
+#bgdiv div>a{
+    display: block;
+    height:44px;
+    width: 250px;
+    background: #eb6619;
+    color: white;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
