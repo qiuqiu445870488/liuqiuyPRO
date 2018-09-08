@@ -3,8 +3,8 @@ a{text-decoration: none;}
 /*头部logo*/
 #header-logo{
 	background: rgba(0,0,0,.3);
-	width: 380px;
-	height: 200px;
+	width: 400px;
+	height: 245px;
 	text-align: center;
 	padding-top: 50px;
 	border-radius:50% ;
@@ -27,7 +27,7 @@ a{text-decoration: none;}
 }
 #header-bg >.header-input{
 	background: white;
-	width: 780px;
+	width: 760px;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
@@ -46,6 +46,7 @@ a{text-decoration: none;}
 #header-bg >.header-input>.header-input-two{
 	width: 50px;
 	height: 40px;
+	line-height: 40px;
 	border-radius: 3px;
 	border: 0;
 	background: #0aa1ed;
@@ -72,7 +73,7 @@ a{text-decoration: none;}
 	display: block;
 	margin: 5px auto 0px;
 	width: 30px;
-	height: 25px;
+	height: 22px;
 }
 
 /*中间部分*/
@@ -106,11 +107,11 @@ a{text-decoration: none;}
 	color: white;
 	margin: 0;
 }
-#slideshow-index,#ifr{
-	width: 1090px;
-	height: 280px;
-	margin: 0 auto;
-}
+/*#slideshow-index,#ifr{*/
+	/*width: 1090px;*/
+	/*height: 280px;*/
+	/*margin: 0 auto;*/
+/*}*/
 #recommend-index{
 	width: 1000px;
 	height: 260px;
@@ -146,11 +147,14 @@ h3 i.tuijian{
 	height: 20px;
 	background: url("../img/index/computer_icon.png") no-repeat;
 	margin:0 10px ;
+	vertical-align: middle;
 }
+
+#body-index h4,#body-index h3{font-size: 16px;margin-top: 20px}
 /*左侧浮动广告*/
 
 a.f-left{
-	left:120px;
+	left:80px;
 	top:200px;
 	position:fixed;
 	width:50px;

@@ -6,30 +6,114 @@
     <link rel="stylesheet" href="../css/base.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
     <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../my-boot/my-boot.css"/>
     <style>
         /*#details div{border: 1px solid red}*/
-        #details .width{width: 1100px;margin:0 auto}
+
+        #details>div{border:1px solid #f1f1f1;padding: 5px}
+        #details .width{width: 1190px;margin:0 auto}
         #details .detail_nav ul li{  float: left;margin:5px}
         #details .detail_nav ul li a:hover{color: #0aa1ed}
         #details .detail_nav ul li:first-child{font-weight: 1000}
         .body_c_b .sw_img li{float: left}
-        .body_c_b .sw_img{width: 500px;overflow: hidden;height: 82px}
-        .body_c_b .sw_img li img{width: 70px;height: 70px;border: 1px solid #ccc;margin:9px 0 10px 10px }
+        .body_c_b .sw_img{width: 500px;overflow: hidden;height: 80px}
+        .body_c_b .sw_img li img{width: 68px;height: 68px;border: 1px solid #ccc;margin:9px 0 10px 10px }
         .body_c_b li:nth-child(4) div:first-child{width: 521px;height: 88px;border: 1px solid #ccc}
         .body_c_b li:nth-child(6) input{width: 38px;height: 38px;border: 1px solid #aaa;text-align: center}
-        .body_c{width: 635px;height: 450px}
-        .background{background: url("../img/index/icon.png")}
+        .body_c{width: 600px;border-left: 1px solid #f1f1f1;border-right: 1px solid #f1f1f1;padding: 20px}
+        .background{background: url("../img/index/icon.png");vertical-align: middle}
         .add_reduce{width: 20px;height: 90px;}
         .add,.reduce{width: 20px;height: 45px;display: block;}
         .add{background-position: -129px -392px}
         .reduce{background-position: -129px -438px}
-
         .add_small,.reduce_small{width: 20px;height: 20px;display: block;}
         .add_small{background-position: -230px -310px}
         .reduce_small{background-position: -230px -330px}
         .tuihuo{width: 14px ; height: 14px}
         .body_c_b .add_cart{width:148px;height: 41px;background-position: 0 -65px;cursor: pointer;margin:0 15px}
         .body_c_b .add_QR{width:123px;height: 41px;cursor: pointer;position: relative;z-index: 200; background: url("../img/index/phonebuy.jpg")}
+       .body_c_t strong{color: #FF5c00;display: inline-block;margin: 5px 0}
+        .body_c_b ul li:first-child h3{color: red;margin: 5px 0}
+        .body_c_b i.jt{display: inline-block;border-top:8px solid transparent;border-left: 15px solid #f70;border-bottom: 8px solid transparent;vertical-align: -4px;margin-right: 5px }
+        .body_c_b i.mj{background-position: 0 -392px;display:inline-block;width: 45px;height: 18px }
+        .body_c_b i.hg{background-position: 0px -432px;display:inline-block;width: 45px;height: 18px }
+        .gou{background: url("../img/index/bg-selected.png") right bottom no-repeat;border:1px solid #f60;padding: 3px 12px;font-size: 14px;width: 30px; }
+       .mar{margin:15px 83px;}
+        .body_c_b ul li:nth-child(3)
+        .body_c_t h1{margin: 15px}
+        .body_r_m{text-align: center;margin: 10px 0px}
+
+        .body_l{width: 350px}
+        .body_l .body_l_t{width: 350px;position: relative}
+        .body_l .body_l_m_img{width: 1000px; height: 57px;position: absolute;}
+        .body_l .body_l_m_div{width: 285px; height:78px;position: absolute;overflow: hidden;left: 28px}
+        .body_l .body_l_m_img li{border: 1px solid #f1f1f1;margin:3px 5px;height: 60px;cursor: pointer}
+        .body_l .body_l_m_img li:hover{border: 1px solid #ff5c00;}
+        .body_l .body_l_m{width: 343px;height:69px;border: 1px solid #f1f1f1;position: relative}
+        .background1{background: url("../img/index/disabled-prev.png")no-repeat center,center}
+        .background2{background: url("../img/index/disabled-next.png")no-repeat center,center}
+        .jiantou1,.jiantou2{display: inline-block; height: 30px;width: 24px;position: absolute;  top: 23px;cursor: pointer;left: -5px}
+        .jiantou1{left: 5px;}
+        .jiantou_l{background: url("../img/index/sprite.png")no-repeat;background-position: -0px -55px}
+        .jiantou_r{background: url("../img/index/sprite.png")no-repeat;background-position: -78px -1px}
+        .jiantoul,.jiantour{width: 22px;height: 64px;}
+        .jiantour{position: absolute;z-index: 99;left:323px}
+        .body_l_b .fenxiang a{background: url("../img/index/icons_1_24.png")no-repeat;display: inline-block;padding-left:25px;height: 24px;line-height: 24px}
+       .body_l_b .fenxiang{margin: 20px}
+       .body_l_b .fenxiang .weixin{background-position:0px -1612px}
+       .body_l_b .fenxiang .xinlang{background-position:0px -104px}
+       .body_l_b .fenxiang .weibo{background-position:0px -260px}
+       .body_l_b .fenxiang .kongjian{background-position:0px -52px}
+       .body_l_b .fenxiang .tqf{background-position:0px -364px}
+       .body_r .body_r_t ul li i{display:inline-block;  width: 35px;  height: 27px;margin: 5px}
+       .body_r .body_r_t ul li{float: left;margin: 0 5px;text-align: center}
+       .baoyou{background-position: 0px -150px}
+       .zhengpin{background-position: -41px -150px}
+       .shouhou{background-position: -80px -150px}
+        .body_r_b i{display: inline-block}
+        .body_r_b{margin:0 20px}
+        .body_r_b i:first-child{width: 28px;height: 28px;background-position: 0 -215px}
+        .body_r_b i:last-child{width: 100px;height: 15px;background-position: -100px -280px}
+        .body_r{width: 198px}
+
+        .body_footer_l_t img{width: 100px}
+        .body_footer_l_t{border: 1px solid #f1f1f1;margin-bottom: 20px}
+        .body_footer_l_t{width: 190px; text-align: center;padding: 15px 0}
+        .body_footer_l_b dt.liulan{height: 28px;background: #ddd;color: black;padding: 5px 0px 0px 10px;font-size: 16px}
+        .body_footer_l_b dt a img{width: 100px;  height: 100px;}
+        .body_footer_l_b>dl{border: 1px solid #ccc}
+        .body_footer_l_b dt a{display: inline-block;width: 190px; text-align: center}
+        .body_footer_l_b dd p{text-align: center}
+        .body_footer_l_b dd>dl{margin: 20px 0px}
+        .body_footer_l{width: 190px;font-size: 12px;}
+        .detail-list li ,.group_suit_ul li{float: left}
+        .group_suit_ul li{padding:0 13px;margin: 5px 0}
+        /*.group_suit_ul li a{height: 30px;display: inline-block;}*/
+        .group_suit_ul li a:hover{color: #0aa1ed}
+        .group_suit_ul li a:focus{color: #FF5c00}
+        /*.group_suit_ul li:first-child{border-top: 2px solid #0aa1ed;height: 35px;}*/
+        .group_suit_ul{border-bottom: 1px solid #ddd;border-top: 2px solid #999}
+        .detail-list li {width: 30%;margin-right: 10px;padding: 0 12px;font-size: 13px; margin:10px 0}
+        .body_footer_r{width: 970px;margin: 0 auto;margin-left: 30px;position: relative}
+        .body_footer_r_x{border: 1px solid #ddd;margin-bottom: 30px}
+        .body_footer_r_index{text-align: center}
+        .pinlun_shangp li{float: left;margin: 0 20px}
+        .pinlun,.shanpin_zixun,.pinzhi{width: 960px;border: 1px solid #f1f1f1;border-top: 2px solid #ff5c00}
+        .pinlun_shangp li:nth-child(2) i{ display: inline-block; width: 100px;  height: 10px;  background-color: #EFEFEF;margin: 10px;vertical-align: middle }
+        .pinlun_shangp li:first-child{ text-align: center }
+        .pinlun_shangp li:last-child div{ background: url("../img/index/nocomment.png") no-repeat center center #fff;width: 400px;height: 90px }
+        .pinlun .p{height:30px;font-size:14px;color:#010101;line-height:30px;padding-left: 20px;margin-bottom: 20px}
+        .shanpin_pingjia li,.shanpin_zixun ul li{float: left;margin: 10px 0 10px 20px;font-size: 14px;}
+        .shanpin_pingjia li:hover{color:#ff5c00}
+        .shanpin_pingjia,.shanpin_zixun{border:1px solid #ddd;border-top:  2px solid #999;}
+        .pinlun>div>div{background: url("../img/index/nocomment.png") no-repeat center center #fff;width: 400px;height: 90px;margin: 5px 259px 10px  auto}
+        .zixun_shuju,.pinzhi>p{margin: 30px}
+
+
+        .body_l div:first-child >.yidong{width: 200px;height: 190px;position: absolute;top: 0;background-color:#ffa;opacity:.5; display: none}
+        .body_l div:first-child >.yidong1{width: 350px;height: 350px;position: absolute;top: 0;border: 1px solid #f1f1f1;border-right: 0  }
+
+        .body_l div:first-child>.datu{width: 400px;height: 400px;position: absolute;top: 0;left: 350px;background: pink;display: none;overflow: hidden}
     </style>
 </head>
 <body>
@@ -46,32 +130,63 @@
             <li>小白猫 柔护洗衣皂 95g/块</li>
         </ul>
     </div>
-    <div class="detail_body width">
-        <div class="body_l">
-            <div class="body_l_t"></div>
-            <div class="body_l_m"></div>
-            <div class="body_l_b"></div>
+
+    <div class="detail_body width afterCrFl">
+        <div class="body_l leftfl">
+            <div class="body_l_t">
+                <img src="../img/index/smallimgbm.jpg" alt="小白猫" style="width: 350px;height: 350px;"/>
+                <div class="yidong"></div>
+                <div class="yidong1"></div>
+                <div class="datu"></div>
+            </div>
+
+
+            <div class="body_l_m">
+                <div class="jiantoul leftfl"><i class="jiantou1 background1 disabled"></i></div>
+                <div class="body_l_m_div">
+                <ul  class="body_l_m_img">
+                    <li class="leftfl"><img src="../img/index/smallbm_60X60.jpg" alt="小白猫"/></li>
+                    <li class="leftfl"><img src="../img/index/smallbeim_60X60.jpg" alt="小白猫"/></li>
+                    <li class="leftfl"><img src="../img/index/smallck.jpg" alt="小白猫"/></li>
+                    <li class="leftfl"><img src="../img/index/smallbm_60X60.jpg" alt="小白猫"/></li>
+                    <li class="leftfl"><img src="../img/index/smallbeim_60X60.jpg" alt="小白猫"/></li>
+                    <li class="leftfl"><img src="../img/index/smallbeim_60X60.jpg" alt="小白猫"/></li>
+
+                </ul>
+                </div>
+                <div class="jiantour"><i class="jiantou2 jiantou_r"></i></div>
+            </div>
+            <div class="body_l_b">
+                <div class="fenxiang">
+                    <a href="#"></a>
+                    <a href="#" class="weixin"></a>
+                    <a href="#" class="xinlang"></a>
+                    <a href="#" class="weibo"></a>
+                    <a href="#" class="kongjian"></a>
+                    <a href="#" class="tqf"></a>
+                </div>
+            </div>
         </div>
-        <div class="body_c">
+        <div class="body_c leftfl">
             <div class="body_c_t">
-                <h1>小白猫 柔护洗衣皂 95g/块</h1>
-                <a href="#"><strong>小白猫满66元减20元</strong></a>
+                <h1 class="fontsi">小白猫 柔护洗衣皂 95g/块</h1>
+                <a href="#"><strong class="fontsi">小白猫满66元减20元</strong></a>
             </div>
             <div class="body_c_b">
-                <i></i>
-                <span>母婴之家发货</span>
+                <i class="jt background"></i>
+                <span class="fontsif">母婴之家发货</span>
                 <ul>
                     <li>
-                        <div class="leftfl">促销价</div>
-                        <div>￥11.80</div>
+                        <div class="leftfl">促销价：</div>
+                        <h3>￥11.80</h3>
                     </li>
                     <li>
-                        <div>促销信息 <i></i><span>小白猫满58减18</span></div>
+                        <div>促销信息： <i class="mj background"></i><span class="fontsif">小白猫满58减18</span></div>
                     </li>
-                    <li>
-                        <div><i></i> <span>加1元起可换购</span></div>
+                    <li class="mar">
+                        <div><i class="hg background"></i> <span class="fontsif">加1元起可换购</span></div>
                     </li>
-                    <li>
+                    <li class=" mar">
                         <div>
                             <ul class="sw_img leftfl">
                                 <li><a href="#"></a><img src="../img/index/bms1.jpg"/></li>
@@ -89,10 +204,10 @@
                         </div>
                     </li>
                     <li class="clearf">
-                        <div class="leftfl">颜色</div>
-                        <div>默认</div>
+                        <div class="leftfl">颜色：</div>
+                        <div class="gou  mar">默认</div>
                     </li>
-                    <li>
+                    <li class="mar afterCrFl">
                         <div class="leftfl">
                             <input type="text" value="1"/>
                             <div class="leftrt">
@@ -103,27 +218,165 @@
                         <div class="add_cart leftfl background"></div>
                         <div class="add_QR leftfl"></div>
                     </li>
-                    <li class="clearf">
-                        <div  class="leftfl">说明</div>
+                    <li class="clearf mar">
+                        <div  class="leftfl fontsif">说明：</div>
                         <img src="../img/index/g_success.png" class="tuihuo leftfl"/>
-                        <div>出库15天内可退货</div>
+                        <div class="fontsif">出库15天内可退货</div>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="body_r">
-            <div class="body_r_t"></div>
-            <div class="body_r_m"></div>
-            <div class="body_r_b"></div>
+        <div class="body_r leftfl">
+            <div class="body_r_t afterCrFl">
+                <ul class="afterCrFl">
+                    <li><i class="background baoyou"></i><p class="fontsif">包邮说明</p></li>
+                    <li><i class="background zhengpin"></i><p class="fontsif">正品保障</p></li>
+                    <li><i class="background shouhou"></i><p class="fontsif">售后服务</p></li>
+                </ul>
+            </div>
+            <div class="body_r_m clearf">
+                <img src="../img/index/whitecat.jpg" style="width: 100px;   height: 40px;"/>
+            </div>
+            <div class="body_r_b">
+                <i class="background"></i>
+                <i class="background"></i>
+            </div>
         </div>
     </div>
+    <div class="body_footer width  afterCrFl">
+        <div class="body_footer_l leftfl">
+            <div class="body_footer_l_t">
+                <img src="../img/index/api.png" alt=""/>
+                <p>手机下单有惊喜 <br/>
+                    分享朋友更容易</p>
+            </div>
+            <div class="body_footer_l_b">
+                <dl>
+                    <dt class="liulan">最近浏览</dt>
+                    <dd>
+                        <dl>
+                            <dt>
+                                <a href="#"><img src="../img/index/bm1_160X160.jpg"/></a>
+                            </dt>
+                            <dd>
+                                <p><a href="#">小白猫 柔护洗衣皂 95g/块</a></p>
+                                <p>￥<span>11.80</span></p>
+                            </dd>
+                        </dl>
+                        <!-- 2-->
+                        <dl>
+                            <dt>
+                                <a href="#"><img src="../img/index/bm1_160X160.jpg"/></a>
+                            </dt>
+                            <dd>
+                                <p><a href="#">小白猫 柔护洗衣皂 95g/块</a></p>
+                                <p>￥<span>11.80</span></p>
+                            </dd>
+                        </dl>
+                        <!-- 3-->
+                        <dl>
+                            <dt>
+                                <a href="#"><img src="../img/index/bm1_160X160.jpg"/></a>
+                            </dt>
+                            <dd>
+                                <p><a href="#">小白猫 柔护洗衣皂 95g/块</a></p>
+                                <p>￥<span>11.80</span></p>
+                            </dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
 
+        </div>
+        <div class="body_footer_r leftfl">
+            <div class="body_footer_r_x afterCrFl">
+                <div>
+                    <ul class="group_suit_ul afterCrFl">
+                        <li><a href="#con1">商品介绍</a></li>
+                        <li><a href="#con2">商品评论</a></li>
+                        <li><a href="#con3">商品咨询</a></li>
+                        <li><a href="#con4">品质保障</a></li>
+                    </ul>
+                </div>
+                <ol>
+                    <li>
+                        <ul class="detail-list clearf">
+                            <li>商品名称：小白猫 柔护洗衣皂 95g/块</li>
+                            <li>适用年龄：不限</li>
+                            <li>规格：95g</li>
+                            <li>产地：中国</li>
+                            <li>洗护类型：洗衣皂</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div>
+            <div class="body_footer_r_index" id="con1">
+                <p><img src="../img/index/maxdetail-1.jpg"/></p>
+                <p><img src="../img/index/max-2.jpg"/></p>
+                <p><img src="../img/index/maxdetail-3.jpg"/></p>
+                <p><img src="../img/index/maxdetail-4.jpg"/></p>
+                <p><img src="../img/index/maxdetail-5.jpg"/></p>
+                <p><img src="../img/index/maxdetail-6.jpg"/></p>
+                <p><img src="../img/index/maxdetail-7.jpg"/></p>
+            </div>
+
+            <div class="pinlun" style="display: none"  id="con2">
+                <p class="p">商品评价</p>
+                <div>
+                    <ul class="pinlun_shangp clearf">
+                        <li>
+                            <strong style="color: #ff5c00; font:400 46px/46px arial;">0</strong>
+                            <span style="color: #f90; font-size: 12px;">%</span>
+                            <p>好评度</p>
+                        </li>
+                        <li>
+                            <p>好评<i></i></p>
+                            <p>中评<i></i></p>
+                            <p>差评<i></i></p>
+                        </li>
+                        <li>
+                            <p>买家印象</p>
+                            <div></div>
+                        </li>
+                    </ul>
+                    <ul class="shanpin_pingjia clearf afterCrFl">
+                        <li>全部评论(0)</li>
+                        <li>好评(0)</li>
+                        <li>中评(0)</li>
+                        <li>差评(0)</li>
+                    </ul>
+                    <div ></div>
+                </div>
+            </div>
+            <div class="shanpin_zixun clearf afterCrFl" style="display: none"  id="con3">
+                <ul>
+                    <li><a href="#">全部咨询(0)</a></li>
+                    <li><a href="#">商品(0)</a></li>
+                    <li><a href="#">配送(0)</a></li>
+                    <li><a href="#">支付(0)</a></li>
+                    <li><a href="#">发票(0)</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+                <p class="clearf zixun_shuju">暂无该产品的咨询数据！</p>
+            </div>
+            <div class="pinzhi "  style="display: none"  id="con4">
+                <p>品质保证</p>
+                <p>温馨提示：详情请查看产品包装文字、说明书与保修卡，或致电母婴之家客服热线垂询。</p>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<!--<footer id="footer"></footer>-->
+
+
+<footer id="footer"></footer>
 <script src="../js/jquery-1.11.3.js"></script>
+<script src="../my-boot/my-boot.js"></script>
 <script src="../js/ajax.js"></script>
+<script src="../js/product_details.js"></script>
 <script src="../js/header.js"></script>
 <script src="../js/footer.js"></script>
 </body>

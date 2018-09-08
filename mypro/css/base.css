@@ -29,3 +29,5 @@ footer iframe{
 a{text-decoration: none;}
 
 .afterCrFl:after{content: "";display: block;clear: both}
+.fontsi{font-size: 16px}
+.fontsif{font-size: 14px}
