@@ -1,0 +1,264 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>鼠标移入下划线展开</title>-->
+    <!--<style type="text/css">-->
+        <!--#underline{-->
+            <!--width: 200px;-->
+            <!--height: 50px;-->
+            <!--background: #ddd;-->
+            <!--margin: 20px;-->
+            <!--position: relative;-->
+        <!--}-->
+
+        <!--#underline:after{-->
+            <!--content: "";-->
+            <!--width: 0;-->
+            <!--height: 1px;-->
+            <!--background: blue;-->
+            <!--position: absolute;-->
+            <!--top: 100%;-->
+            <!--left: 50%;-->
+            <!--transition: all .8s;-->
+        <!--}-->
+
+        <!--#underline:hover:after{-->
+            <!--left: 0%;-->
+            <!--width: 100%;-->
+        <!--}-->
+    <!--</style>-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<div id="underline"></div>-->
+
+<!--</body>-->
+
+<!--</html>-->
+
+<!--<!DOCTYPE HTML>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Jay 跨锐</title>-->
+    <!--<style type="text/css">-->
+        <!--#div1 {-->
+            <!--width: 100px;-->
+            <!--height: 100px;-->
+            <!--background-color: red;-->
+            <!--position: absolute;-->
+            <!--left: 100px;-->
+            <!--top: 800px;-->
+            <!--opacity: 0;-->
+            <!--filter: alpha(opacity =0);-->
+        <!--}-->
+    <!--</style>-->
+    <!--<script type="text/javascript" src="jquery-1.11.3.js"></script>-->
+    <!--<script type="text/javascript">-->
+        <!--jQuery (function ($)-->
+        <!--{-->
+            <!--$ ('div#div1').animate (-->
+                    <!--{-->
+                        <!--top : '100px',-->
+                        <!--opacity : 1,-->
+                        <!--filter : "alpha(opacity=" + 100 + ")"-->
+                    <!--}, 2000);-->
+        <!--});-->
+    <!--</script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="div1">1</div>-->
+<!--<script type="text/javascript">-->
+<!--//    (function ()-->
+<!--//    {-->
+<!--//        var odiv = document.getElementById ('div1');-->
+<!--//        this.interval = setInterval (function ()-->
+<!--//        {-->
+<!--//            var speed = (100 - odiv.offsetTop) / 10;-->
+<!--//            if (speed > 0)-->
+<!--//            {-->
+<!--//                speed = Math.ceil (speed);-->
+<!--//            }-->
+<!--//            else if (speed < 0)-->
+<!--//            {-->
+<!--//                speed = Math.floor (speed);-->
+<!--//            }-->
+<!--//            else-->
+<!--//            {-->
+<!--//                clearInterval (this.interval);-->
+<!--//            }-->
+<!--//            odiv.style.opacity = (800 - odiv.offsetTop) / 700;-->
+<!--//            odiv.style.filter = "alpha(opacity=" + (odiv.style.opacity * 100) + ")";-->
+<!--//            odiv.style.top = odiv.offsetTop + speed + 'px';-->
+<!--//            document.title = odiv.offsetTop + ',' + speed;-->
+<!--//        }, 30);-->
+<!--//    }) ();-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS实现轮播图</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main {
+            width: 1200px;
+            height: auto;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .nav {
+            width: 1200px;
+            height: 80px;
+        }
+
+        ul {list-style-type: none;}
+
+        li {
+            float: left;
+            width: 25%;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            cursor: pointer;
+        }
+
+        .changeColor {
+            background: #ffcc00;
+            border-radius: 5px;
+        }
+
+        .banner {
+            width: 1200px;
+            height: 460px;
+            overflow: hidden;
+        }
+
+        .banner-slide {
+            width: 1200px;
+            height: 460px;
+            background-repeat: no-repeat;
+            position: absolute;
+            background-size: 100%;
+            height: 100%;
+        }
+
+        .slide1 {
+            background-image: url("../niujishengxian/public/img/home/niu.jpg");
+        }
+        .slide2 {
+            background-image: url("../niujishengxian/public/img/home/rou.jpg");
+        }
+        .slide3 {
+            background-image: url("../niujishengxian/public/img/home/niu.jpg");
+        }
+        .slide4 {
+            background-image: url("../niujishengxian/public/img/home/rou.jpg");
+        }
+    </style>
+</head>
+<body>
+<div class="main" id="main">
+    <div class="nav" id="nav">
+        <ul>
+            <li class="changeColor">首页</li>
+            <li>点击看看</li>
+            <li>会自动的</li>
+            <li>我的网站</li>
+        </ul>
+    </div>
+    <div class="banner" id="banner">
+        <a href="#">
+            <div class="banner-slide slide1"></div>
+        </a>
+        <a href="#">
+            <div class="banner-slide slide2"></div>
+        </a>
+        <a href="#">
+            <div class="banner-slide slide3"></div>
+        </a>
+        <a href="#">
+            <div class="banner-slide slide4"></div>
+        </a>
+    </div>
+</div>
+
+
+<script>
+var timer = null,
+            index = 0,
+pics = document.getElementsByClassName("banner-slide"),
+lis = document.getElementsByTagName("li");
+
+
+//封装一个代替getElementById()的方法
+                        function byId(id){
+    return typeof(id) === "string"?document.getElementById(id):id;
+}
+
+function slideImg() {
+    var main = byId("main");
+    var banner = byId("banner");
+main.onmouseover = function(){
+stopAutoPlay();
+}
+main.onmouseout = function(){
+startAutoPlay();
+}
+main.onmouseout();
+
+//点击导航栏切换图片
+for(var i=0;i<pics.length;i++){
+    lis[i].id = i;
+//给每个li项绑定点击事件
+  lis[i].onclick = function(){
+//获取当前li项的index值
+index = this.id;
+changeImg();
+}
+}
+}
+
+for(var i=0;i<pics.length;i++//开始播放轮播图
+    function startAutoPlay(){
+        timer = setInterval(function(){
+            index++;
+            if(index>3){
+                index = 0;
+            }
+            changeImg();
+        },1000);
+    }
+//暂停播放
+      function stopAutoPlay(){
+          if (timer) {
+              clearInterval(timer);
+          }
+      }
+//改变轮播图
+      function changeImg(){){
+    pics[i].style.display = "none";
+    lis[i].className = "";
+}
+pics[index].style.display = "block";
+lis[index].className = "changeColor";
+}
+
+slideImg();
+</script>
+</body>
+</html>
+
+
