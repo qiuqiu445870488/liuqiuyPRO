@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>品牌生鲜|动态资讯</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="myboot/myboot.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+</head>
+<style>
+    div,li,ul{border: 0px solid red;}
+</style>
+<body>
+    <div id="page" style="width: 100%"  class="">
+        <header class="text-center isAfter" id="header" style="min-height:100%"></header>
+
+        <section style="mb-5">
+            <div class="container border-top" style="margin-top: 175px;padding-top:2% ">
+                <div class="row">
+                    <div class="col-12">
+                        <span>您当前的位置：首页 > 动态资讯</span>
+                        <span>公司新闻</span>
+                        <span>行业资讯</span>
+                    </div>
+                </div>
+
+                <div class="row mt-5" v-for="(state,i) in State" :key="i">
+                    <div class="col-10">
+                        <div class="fontNli">{{state.title}}</div>
+                        <div class="fontNli">{{state.text}}</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="fontNli">
+                            <img :src="state.img" alt="div"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+        <section>
+            <div class="container isAfter">
+                <ul class="float-right">
+                    <li class="float-left mr-3"><a href="#" class="close fontNli">首页</a></li>
+                    <li class="float-left mr-3"><a href="#" class="close fontNli" @click="prev">上一页</a></li>
+                    <li class="float-left mr-3" v-for="pages in page"><a href="#" class="close fontNli"  :class="pages==count?'bgBlack':''">{{pages}}</a></li>
+                    <li class="float-left mr-3"><a href="#" class="close fontNli" @click="next">下一页</a></li>
+                    <li class="float-left mr-3"><a href="#" class="close fontNli">尾页</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer id="footer" class="mt-5"></footer>
+    </div>
+
+<script>
+    $(document).ready(function(){
+       $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+
+
+//    var state = [];
+//    for(var i = 0 ;i<2;i++){
+//        state.push(bodyState[i]);
+//        console.log(state[0])
+//    }
+
+
+
+
+
+    new Vue({
+        el:"#page",
+        data:{ bodyState :{},State:{},count:1, page :0},
+        methods:{
+            prev(e){
+        e.preventDefault()
+        if(this.count>1)this.count--
+        console.log(this.count)
+    },
+    next(e){
+        e.preventDefault()
+        this.count++
+        console.log(this.count)
+
+        for(var i = 0;i<this.count;i++){
+            console.log(this.bodyState[i])
+            //this.state.push(this.bodyState[i])
+            this.state+=this.bodyState[i]
+
+        } console.log(this.State)
+    }
+    },
+        created(){
+        axios.get("http://127.0.0.1:4000/news").then(
+                result=>{
+            console.log(result.data.msg.length)
+            //console.log(this.bodyState)
+            this.bodyState=result.data.msg
+            this.page= Math.ceil((this.bodyState.length)/2)
+
+
+
+        }
+    )
+
+
+
+    }
+
+
+    });
+
+</script>
+</body>
+</html>

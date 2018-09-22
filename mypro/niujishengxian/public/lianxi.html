@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>品牌生鲜|联系我们</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="myboot/myboot.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+<style>
+    div,li,ul{border: 0px solid red;}
+</style>
+<body>
+    <div id="page" style="width: 100%"  class="">
+        <header class="text-center isAfter" id="header" style="min-height:100%"></header>
+        <div class="container text-center" >
+            <iframe src="map.html" frameborder="0" style="margin-top:15% ;width: 100%;height: 500px"></iframe>
+            <hr/>
+        </div>
+        <footer id="footer" class="mt-5"></footer>
+
+
+    </div>
+<script>
+    $(document).ready(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#map").load("map.html");
+    });
+
+</script>
+</body>
+</html>

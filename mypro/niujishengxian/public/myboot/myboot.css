@@ -3,9 +3,7 @@
     margin: 0;
     word-spacing: normal;
     color: #8d9095;
-    font-family: "微软雅黑",Helvetica,Arial,Verdana,sans-serif;
-    font-style: normal;
-    font-weight: normal;
+    font: normal normal 16px "微软雅黑",Helvetica,Arial,Verdana,sans-serif;
 
 }
 ul{margin: 0}
@@ -15,13 +13,13 @@ li{list-style: none}
 .headerul{display: inline-block;overflow: auto;}
 .headerli{display: inline;float: left;padding:20px 20px 10px 20px;cursor: pointer;margin:0 20px 10px 20px;border-bottom:1px solid transparent;}
 /*.headerli:hover{border-bottom:1px solid black }*/
-
-#underline{
+.headerli.mt-1.underline a{text-decoration: none;color: #666;font-size: 100%}
+.underline{
     margin: 20px;
     position: relative;
 }
 
-#underline:after{
+.underline:after{
     content: "";
     width: 0;
     height: 1px;
@@ -32,7 +30,7 @@ li{list-style: none}
     transition: all .8s;
 }
 
-#underline:hover:after{
+.underline:hover:after{
     left: 0%;
     width: 100%;
 }
@@ -72,8 +70,7 @@ li{list-style: none}
 
     }
     .smallNavFl{
-        width: 70%;
-        margin-top: 3%;
+        width: 0;
     }
     #body_jianjie{margin-top: 190px}
     .percentW-5min {  width: 50%;}
@@ -82,6 +79,8 @@ li{list-style: none}
     .pl-min0{padding: 0 !important;}
     .navMin{position: absolute;  top: 0;  right: 0;  left: 0;  z-index: 1030;}
     .lunboImg{position: absolute;  top: 0;  right: 0;  left: 0;}
+    /*.zhongleiLi{width: 50%}*/
+    .zhongleiLi img{width: 100%}
     section{margin-top: 100px !important;}
 }
 
@@ -168,6 +167,10 @@ li{list-style: none}
 #footer .icon1{background-position: -24px -96px}
 #footer .icon2{background-position: -48px -96px}
 #footer .icon3{background-position-y: -96px}
+#footer .iphorm-submit-wrap{
+    padding: 5px 30px;
+
+}
 .lunboImg .slide1 {
     background-image: url("../img/home/rou.jpg");
 }
@@ -187,3 +190,5 @@ li{list-style: none}
     height: 100%;
 
 }
+.cursorP{cursor:pointer}
+.bgBlack{color:red !important;}

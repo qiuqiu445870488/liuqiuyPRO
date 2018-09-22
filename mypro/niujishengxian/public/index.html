@@ -17,31 +17,7 @@
 </style>
 <body>
     <div id="page" style="width: 100%"  class="">
-        <header class="text-center isAfter" id="header" style="min-height:100%">
-        <div class="navMin">
-        <div class=" " ><img src="./img/home/niujishengxian.png" class="logo mt-4 mb-2"/></div>
-        <div class="isAfter text-center navBig">
-            <ul class="text-center headerul" style="">
-                <li v-for="item in nav" class="headerli mt-1" id="underline">{{item}}</li>
-            </ul>
-        </div>
-            <!--小屏幕导航-->
-            <div class="navSmall" style="z-index: 1">
-                <nav class="navbar navba-rexpand-sm bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand">导航</a>
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#cNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="cNavbar">
-                        <ul class="navbar-nav">
-                            <li  class="nav-item hidden-sm" v-for="item in nav"><a href="#" class="nav-link">{{item}}</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        </header>
+        <header class="text-center isAfter" id="header" style="min-height:100%"></header>
         <!--轮播-->
         <div class="lunboImg banner" style="z-index: 0;top:0">
             <!--<img src="./img/home/rou.jpg"/>-->
@@ -59,44 +35,57 @@
 
             <!--大屏幕导航 -->
             <div class="isAfter" style="margin-top: 55%">
-                <div style="width:10%;margin: 8% 0 20% 15%" class="float-left navBig" >
-                    <h2>
-                        <div class="fontZ">产品种类</div>
-                        <div class="fontF">Food types</div>
-                    </h2>
-                    <ul>
-                        <li v-for="item in bodyNav" class="fontNli mt-3">{{item}}</li>
-                    </ul>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div  class="float-left navBig" >
+                                <h2>
+                                    <div class="fontZ">产品种类</div>
+                                    <div class="fontF">Food types</div>
+                                </h2>
+                                <ul>
+                                    <li v-for="item in bodyNav" class="fontNli mt-3">{{item}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="smallNavFl">
+                            <!--小屏幕导航2-->
+                            <div class="navSmall"  >
+                                <nav class="navbar navba-rexpand-sm bg-dark navbar-dark">
+                                    <a href="#" class="navbar-brand">产品种类/Food types</a>
+                                    <button class="navbar-toggler" data-toggle="collapse" data-target="#bNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+
+                                    <div class="collapse navbar-collapse" id="bNavbar">
+                                        <ul class="navbar-nav">
+                                            <li  class="nav-item hidden-sm text-center"v-for="item in bodyNav"><a href="#" class="nav-link">{{item}}</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!--小屏幕导航 尾部-->
+
+                        </div>
+                        <div class="col-md-10 col-sm-12">
+
+                                <ul class="isAfter" >
+                                    <li v-for="item in bodyImg" class=" float-left mr-2 zhongleiLi fontNli"><img :src="item.img"/>
+                                        <div class="mt-3 ml-2 fontNli " style="color: black">{{item.title}}</div>
+                                        <p class="bodyInt ml-2 bodyImgHover fontNli " :title="item.int">{{item.int}}</p>
+                                    </li>
+                                </ul>
+
+                        </div>
+                    </div>
+
                 </div>
 
-                <!--产品种类图片+小屏幕导航-->
-                    <div class="isAfter float-left smallNavFl">
-                        <!--小屏幕导航2-->
-                        <div class="navSmall"  >
-                            <nav class="navbar navba-rexpand-sm bg-dark navbar-dark">
-                                <a href="#" class="navbar-brand">产品种类/Food types</a>
-                                <button class="navbar-toggler" data-toggle="collapse" data-target="#bNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
 
-                                <div class="collapse navbar-collapse" id="bNavbar">
-                                    <ul class="navbar-nav">
-                                        <li  class="nav-item hidden-sm text-center"v-for="item in bodyNav"><a href="#" class="nav-link">{{item}}</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                        <!--小屏幕导航 尾部-->
-                        <ul class="isAfter" >
-                            <li v-for="item in bodyImg" class="fontNli float-left mr-2 zhongleiLi"><img :src="item.img"/>
-                                <div class="mt-3 ml-2" style="color: black">{{item.title}}</div>
-                                <p class="bodyInt ml-2 bodyImgHover" :title="item.int">{{item.int}}</p>
-                            </li>
-                        </ul>
-                    </div>
             </div>
-            <!--产品种类图片+小屏幕导航 尾部-->
-            <!--大屏幕导航 尾部-->
+
+
         </section>
         <section id="body_jianjie" class="isAfter">
                 <div class="float-left smallJianjie percentW-5min pt-5">
@@ -127,7 +116,7 @@
             </div>
         </section>
         <section class="container">
-                <div class="">
+                <div class="mt-5">
                         <div class="fontZ">制作方法</div>
                         <div class="fontF">Cooking</div>
                 </div>
@@ -145,7 +134,7 @@
         </section>
         <!--新闻资讯-->
         <section class="container">
-            <div class="">
+            <div class="mt-5">
                 <div class="fontZ">新闻资讯</div>
                 <div class="fontF">News</div>
             </div>
@@ -161,24 +150,24 @@
                                 <span class="d-inline-block">6-1</span>
                             </div>
                             <div class="col-10">
-                                <div class="fontF" style="color: black">全国粮改饲技术创新与推广</div>
-                                <article class="fontF">我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普...</article>
+                                <div class="fontNli" style="color: black">全国粮改饲技术创新与推广</div>
+                                <article class="fontNli">我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普...</article>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--新闻质询右边-->
-                <div class="col-md-6 col-sm-12  ">
+                <div class="col-md-6 col-sm-12">
                     <div style="width: 100%" class="">
                         <div class="row ml-3 newsHover p-4 ml-max0" v-for="(news,i) in bodyNews" :key="news.i">
                             <div class="col-2 d-flex flex-column text-center mt-3 small"style="line-height:25px;width: 100%">
-                                <span class="d-inline-block border-bottom" >{{news.year}}</span>
-                                <span class="d-inline-block">{{news.day.slice(1,2)}}月</span>
+                                <span class="d-inline-block border-bottom fontNli" >{{news.year}}</span>
+                                <span class="d-inline-block fontNli">{{news.day.slice(1,2)}}月</span>
                             </div>
                             <div class="col-10">
-                                <div class="fontF" style="color: black">{{news.title}}</div>
-                                <article class="fontF">{{news.text}}</article>
+                                <div class="fontNli" style="color: black">{{news.title}}</div>
+                                <article class="fontNli">{{news.text}}</article>
                             </div>
                         </div>
                     </div>
@@ -187,19 +176,19 @@
         </section>
         <!--客户评价-->
         <section class="container">
-            <div class="">
+            <div class="mt-5">
                 <div class="fontZ">客户评价</div>
                 <div class="fontF">Customer comments</div>
             </div>
 
                 <div class="row mt-5 mb-5">
-                    <div class="col-md-6"   v-for="cust in bodyCust">
+                    <div class="col-md-6 col-sm-12"   v-for="cust in bodyCust">
                         <div class="row mt-3 mr-1" style="background: #f8f8f8;">
-                            <div class="col-md-5 pl-min0 fontNli" >
+                            <div class="col-5  pl-min0 fontNli" >
                                 <img :src="cust.img" class=""/>
                             </div>
-                            <div class="col-md-7 mt-5">
-                                <p class="fontF" style="color: black">{{cust.title}}</p>
+                            <div class="col-7 mt-md-5 mt-sm-3">
+                                <div class="fontF mt-3" style="color: black">{{cust.title}}</div>
                                 <article class="fontNli" style="">{{cust.text}}</article>
                             </div>
                         </div>
@@ -223,28 +212,15 @@
             </div>
         </section>
 
-        <footer id="footer" class="mt-5">
-            <div class="d-flex flex-column container">
-                <span class="fontF" style="color: black">品牌生鲜网站</span>
-                <span class="fontNli">地址：苏州市工业园区金鸡湖大道099号大厦</span>
-                <span class="fontNli">电话：000-66668888</span>
-                <span class="fontNli">手机：12345678911</span>
-                <span class="fontNli">传真：000-66668888</span>
-                <span class="fontNli">邮箱：website@qq.com</span>
-                <ul>
-                    <li class="icon icon1"></li>
-                    <li class="icon icon2"></li>
-                    <li class="icon icon3"></li>
-                </ul>
-            </div>
-          <div style="background: #f8f8f8;">
-              <div class="fontNli p-3" style="margin-left: 20%">版权所有 ©2017   苏ICP备1230012300号</div>
-          </div>
-        </footer>
+        <footer id="footer" class="mt-5"></footer>
 
 
     </div>
 <script>
+    $(document).ready(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
     var nav = ["生鲜首页","品牌介绍","产品中心","资讯动态","养殖基地","联系我们"];
     var bodyNav = ["冷冻生鲜","加工产品","农副产品"];
     var bodyImg = [
@@ -261,22 +237,13 @@
         {
             title:"牛百叶",
             img:"./img/home/niubaiye.jpg",
-            int: " 牛肚含蛋白质、脂肪、钙、磷、铁、硫胺素、核黄素、尼克酸等，具有补益脾胃，补气养血，补虚益精、消渴、风眩之功效，适宜于病后虚羸、气血不足、营养不良、脾胃薄弱之人。",
+            int: " 牛肚含蛋白质、脂肪、钙、磷、铁、硫胺素、核黄素、尼克酸等，具有补益脾胃，补气养血，补虚益精、消渴、风眩之功效，适宜于病后虚羸、气血不足、营养不良、脾胃薄弱之人。"
     },
        {
            title: "牛板筋",
            img:"./img/home/niubanjin.jpg",
-           int: "牛板筋主要为蛋白质（胶原蛋白），所以牛板筋的营养价值并不是很丰富。其实牛板筋主要不是体现在它的营养上面，而是因为它好吃，有嚼劲，是越嚼越有味的东西，所以受到很多朋友的喜爱。"},
-        {
-            title: "火腿",
-            img:"./img/home/huotui.jpg",
-            int:"牛腿肉是中国人的第二大肉类食品，仅次于猪肉，牛肉蛋白质含量高，而脂肪含量低，所以味道鲜美，受人喜爱，享有“肉中骄子”的美称。"
-        },
-        {
-            title:"牛肩",
-            img:"./img/home/niujian.jpg",
-            int:"牛肩肉，位于牛的前肩胛部，前腿的上部，由冈上、冈下肌、前臂筋膜张肌，臂三头肌外侧头肌构成，适合炖、煮、卤。"
-        },
+           int: "牛板筋主要为蛋白质（胶原蛋白），所以牛板筋的营养价值并不是很丰富。其实牛板筋主要不是体现在它的营养上面，而是因为它好吃，有嚼劲，是越嚼越有味的东西，所以受到很多朋友的喜爱。"}
+
     ];
     var bodySp =[
             {
